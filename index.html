@@ -32,28 +32,10 @@
       -webkit-tap-highlight-color: transparent;
     }
 
-    .page-title {
-      text-align: center;
-      margin-bottom: 14px;
-    }
-
-    .page-title h1 {
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-
+    .page-title { text-align: center; margin-bottom: 14px; }
+    .page-title h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.03em; display: flex; align-items: center; justify-content: center; gap: 8px; }
     .page-title h1 svg { color: #16a34a; }
-
-    .page-title p {
-      font-size: 12px;
-      color: #6b7280;
-      margin-top: 2px;
-    }
+    .page-title p { font-size: 12px; color: #6b7280; margin-top: 2px; }
 
     /* ── Phone Frame ── */
     .phone {
@@ -63,1062 +45,161 @@
       background: #0a0a0a;
       border-radius: 44px;
       padding: 12px;
-      box-shadow:
-        0 0 0 1px rgba(255,255,255,0.08) inset,
-        0 30px 60px -10px rgba(0,0,0,0.3),
-        0 10px 20px rgba(0,0,0,0.12);
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.08) inset, 0 30px 60px -10px rgba(0,0,0,0.3), 0 10px 20px rgba(0,0,0,0.12);
     }
-
-    .phone-screen {
-      width: 100%;
-      height: 100%;
-      background: #fff;
-      border-radius: 34px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
+    .phone-screen { width: 100%; height: 100%; background: #fff; border-radius: 34px; overflow: hidden; display: flex; flex-direction: column; }
 
     /* ── Status Bar ── */
-    .statusbar {
-      height: 42px;
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #fff;
-    }
-
-    .dynamic-island {
-      width: 110px;
-      height: 28px;
-      background: #0a0a0a;
-      border-radius: 20px;
-      margin-top: -4px;
-    }
+    .statusbar { height: 42px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: #fff; }
+    .dynamic-island { width: 110px; height: 28px; background: #0a0a0a; border-radius: 20px; margin-top: -4px; }
 
     /* ── Views (No Scroll) ── */
-    .view {
-      flex: 1;
-      display: none;
-      flex-direction: column;
-      overflow: hidden;
-    }
-
+    .view { flex: 1; display: none; flex-direction: column; overflow: hidden; }
     .view.active { display: flex; }
 
-    /* ── App Bar (Map) ── */
-    .app-bar {
-      height: 44px;
-      padding: 0 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-shrink: 0;
-    }
-
-    .brand-group {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .app-bar .brand {
-      font-size: 17px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
+    /* ── App Bar ── */
+    .app-bar { height: 44px; padding: 0 16px; display: flex; align-items: center; justify-content: space-between; flex-shrink: 0; }
+    .brand-group { display: flex; align-items: center; gap: 6px; }
+    .app-bar .brand { font-size: 17px; font-weight: 700; letter-spacing: -0.02em; }
     .app-bar svg { color: #16a34a; width: 19px; height: 19px; }
 
-    /* ── View Header ── */
-    .view-header {
-      height: 44px;
-      padding: 0 14px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-shrink: 0;
-      position: relative;
-    }
+    .view-header { height: 44px; padding: 0 14px; display: flex; align-items: center; justify-content: space-between; flex-shrink: 0; position: relative; }
+    .view-header .title { font-size: 16px; font-weight: 600; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); line-height: 1; white-space: nowrap; pointer-events: none; }
+    .view-header button.header-back-btn { background: none; border: none; font-family: inherit; font-size: 13px; color: #16a34a; cursor: pointer; font-weight: 600; z-index: 2; display: flex; align-items: center; gap: 2px; padding: 4px 0; }
 
-    .view-header .title {
-      font-size: 16px;
-      font-weight: 600;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      line-height: 1;
-      white-space: nowrap;
-      pointer-events: none;
-    }
+    /* ── In-App Accessibility Controls ── */
+    .inapp-a11y-group { display: flex; align-items: center; gap: 5px; z-index: 3; }
+    .inapp-a11y-btn { height: 26px; padding: 0 6px; border-radius: 13px; border: 1px solid #d1d5db; background: #f3f4f6; color: #374151; font-size: 10.5px; font-weight: 700; font-family: inherit; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.12s; white-space: nowrap; }
+    .inapp-a11y-btn:hover { background: #e5e7eb; border-color: #9ca3af; }
+    .inapp-a11y-btn.active { background: #16a34a; color: #fff; border-color: #16a34a; }
 
-    .view-header button.header-back-btn {
-      background: none;
-      border: none;
-      font-family: inherit;
-      font-size: 13px;
-      color: #16a34a;
-      cursor: pointer;
-      font-weight: 600;
-      z-index: 2;
-      display: flex;
-      align-items: center;
-      gap: 2px;
-      padding: 4px 0;
-    }
-
-    /* ── In-App Accessibility Controls (Inside App Screen) ── */
-    .inapp-a11y-group {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      z-index: 3;
-    }
-
-    .inapp-a11y-btn {
-      height: 26px;
-      min-width: 26px;
-      padding: 0 6px;
-      border-radius: 13px;
-      border: 1px solid #d1d5db;
-      background: #f3f4f6;
-      color: #374151;
-      font-size: 10.5px;
-      font-weight: 700;
-      font-family: inherit;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.12s;
-    }
-
-    .inapp-a11y-btn:hover {
-      background: #e5e7eb;
-      border-color: #9ca3af;
-    }
-
-    .inapp-a11y-btn.active {
-      background: #16a34a;
-      color: #fff;
-      border-color: #16a34a;
-    }
-
-    /* ── Search ── */
-    .search {
-      padding: 0 20px 10px;
-      flex-shrink: 0;
-    }
-
-    .search-wrap {
-      position: relative;
-    }
-
-    .search-wrap svg {
-      position: absolute;
-      left: 12px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 16px;
-      height: 16px;
-      color: #9ca3af;
-      pointer-events: none;
-    }
-
-    .search-wrap input {
-      width: 100%;
-      height: 38px;
-      border: 1px solid #e5e7eb;
-      border-radius: 10px;
-      padding: 0 12px 0 36px;
-      font-size: 14px;
-      font-family: inherit;
-      background: #f9fafb;
-      outline: none;
-      color: #111;
-    }
-
-    .search-wrap input::placeholder { color: #9ca3af; }
+    /* ── Search & Map ── */
+    .search { padding: 0 20px 10px; flex-shrink: 0; }
+    .search-wrap { position: relative; }
+    .search-wrap svg { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; color: #9ca3af; pointer-events: none; }
+    .search-wrap input { width: 100%; height: 38px; border: 1px solid #e5e7eb; border-radius: 10px; padding: 0 12px 0 36px; font-size: 14px; font-family: inherit; background: #f9fafb; outline: none; color: #111; }
     .search-wrap input:focus { border-color: #16a34a; background: #fff; }
 
-    .search-row {
-      display: flex;
-      gap: 8px;
-    }
+    .map-area { flex: 1; margin: 0 16px 10px; border-radius: 14px; overflow: hidden; position: relative; background: #dde8dd; cursor: crosshair; }
+    .map-area svg.map-bg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+    
+    .pin { position: absolute; transform: translate(-50%, -100%); z-index: 2; cursor: pointer; transition: transform 0.1s; }
+    .pin:active { transform: translate(-50%, -100%) scale(0.9); }
+    .pin svg { width: 26px; height: 32px; filter: drop-shadow(0 2px 3px rgba(0,0,0,0.18)); }
+    .user-loc { position: absolute; transform: translate(-50%, -50%); z-index: 1; pointer-events: none;}
+    .user-loc .pulse { width: 32px; height: 32px; border-radius: 50%; background: rgba(59,130,246,0.12); display: flex; align-items: center; justify-content: center; }
+    .user-loc .dot { width: 14px; height: 14px; background: #3b82f6; border-radius: 50%; border: 3px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.2); }
 
-    .search-row .search-wrap { flex: 1; }
-
-    .filter-btn {
-      width: 38px;
-      height: 38px;
-      border: 1px solid #e5e7eb;
-      border-radius: 10px;
-      background: #f9fafb;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      flex-shrink: 0;
-    }
-
-    .filter-btn svg { width: 16px; height: 16px; color: #6b7280; }
-
-    /* ── Map ── */
-    .map-area {
-      flex: 1;
-      margin: 0 16px 10px;
-      border-radius: 14px;
-      overflow: hidden;
-      position: relative;
-      background: #dde8dd;
-    }
-
-    .map-area svg.map-bg {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    .pin {
-      position: absolute;
-      transform: translate(-50%, -100%);
-      z-index: 2;
-    }
-
-    .pin svg {
-      width: 26px;
-      height: 32px;
-      filter: drop-shadow(0 2px 3px rgba(0,0,0,0.18));
-    }
-
-    .pin-label {
-      position: absolute;
-      bottom: calc(100% + 4px);
-      left: 50%;
-      transform: translateX(-50%);
-      background: #fff;
-      padding: 4px 9px;
-      border-radius: 7px;
-      box-shadow: 0 1px 6px rgba(0,0,0,0.1);
-      font-size: 10px;
-      font-weight: 500;
-      white-space: nowrap;
-      color: #374151;
-    }
-
-    .pin-label::after {
-      content: '';
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      border: 4px solid transparent;
-      border-top-color: #fff;
-    }
-
-    .status-text {
-      font-size: 9px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-    }
-
-    .status-text.open { color: #dc2626; }
-    .status-text.progress { color: #d97706; }
-    .status-text.resolved { color: #16a34a; }
-
-    .user-loc {
-      position: absolute;
-      transform: translate(-50%, -50%);
-      z-index: 1;
-    }
-
-    .user-loc .pulse {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: rgba(59,130,246,0.12);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .user-loc .dot {
-      width: 14px;
-      height: 14px;
-      background: #3b82f6;
-      border-radius: 50%;
-      border: 3px solid #fff;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-    }
-
-    /* ── Report Form (Fits Screen - No Scroll) ── */
-    .form-scroll {
-      flex: 1;
-      overflow-y: hidden;
-      padding: 4px 16px 8px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .form-section { margin-bottom: 6px; }
-
-    .form-label {
-      font-size: 11.5px;
-      font-weight: 600;
-      color: #374151;
-      margin-bottom: 2px;
-      display: block;
-    }
-
-    .photo-upload {
-      border: 1.5px dashed #d1d5db;
-      border-radius: 9px;
-      padding: 6px 10px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      cursor: pointer;
-      transition: border-color 0.15s, background 0.15s;
-    }
-
+    /* ── Report Form ── */
+    .form-scroll { flex: 1; overflow-y: auto; padding: 4px 16px 8px; display: flex; flex-direction: column; gap: 12px; }
+    .form-label { font-size: 11.5px; font-weight: 600; color: #374151; margin-bottom: 2px; display: block; }
+    .form-hint { font-size: 9.5px; color: #64748b; margin-bottom: 6px; line-height: 1.2; }
+    
+    .photo-upload { border: 1.5px dashed #d1d5db; border-radius: 9px; padding: 8px 10px; display: flex; align-items: center; gap: 8px; cursor: pointer; transition: border-color 0.15s, background 0.15s; }
     .photo-upload:hover { border-color: #16a34a; background: #f0fdf4; }
+    .photo-icons { display: flex; gap: 6px; }
+    .icon-circle { width: 26px; height: 26px; border-radius: 50%; background: #f3f4f6; display: flex; align-items: center; justify-content: center; }
+    .icon-circle svg { width: 14px; height: 14px; color: #6b7280; }
+    .photo-upload span { font-size: 11px; color: #4b5563; font-weight: 500; }
 
-    .photo-icons {
-      display: flex;
-      gap: 6px;
-    }
+    .category-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+    .cat-btn { padding: 6px; border: 1px solid #e5e7eb; border-radius: 8px; background: #fff; cursor: pointer; display: flex; align-items: center; gap: 6px; font-family: inherit; font-size: 11px; font-weight: 500; color: #374151; transition: all 0.15s; text-align: left;}
+    .cat-btn.selected { border-color: #16a34a; background: #f0fdf4; color: #166534; font-weight: 600; box-shadow: 0 1px 2px rgba(22, 163, 74, 0.1); }
+    .cat-btn:hover:not(.selected) { border-color: #d1d5db; background: #f9fafb; }
+    .cat-btn span.emoji { font-size: 14px; }
 
-    .icon-circle {
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
-      background: #f3f4f6;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+    .loc-controls { display: flex; flex-direction: column; gap: 6px; }
+    .loc-buttons { display: flex; gap: 6px; }
+    .loc-btn { flex: 1; padding: 6px; border: 1px solid #e5e7eb; border-radius: 7px; background: #f9fafb; font-family: inherit; font-size: 10.5px; font-weight: 600; color: #4b5563; display: flex; align-items: center; justify-content: center; gap: 4px; cursor: pointer; transition: all 0.1s;}
+    .loc-btn:hover { background: #e5e7eb; }
+    .loc-btn svg { width: 12px; height: 12px; }
 
-    .photo-icons svg { width: 14px; height: 14px; color: #6b7280; }
-
-    .photo-upload span {
-      font-size: 11px;
-      color: #4b5563;
-      font-weight: 500;
-    }
-
-    .form-input,
-    .form-select {
-      width: 100%;
-      height: 32px;
-      border: 1px solid #e5e7eb;
-      border-radius: 7px;
-      padding: 0 10px;
-      font-size: 12.5px;
-      font-family: inherit;
-      background: #fff;
-      outline: none;
-      color: #111;
-    }
-
-    .form-input:focus,
-    .form-select:focus { border-color: #16a34a; }
-
-    .form-select {
-      appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%236b7280' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 10px center;
-      cursor: pointer;
-    }
-
-    .input-icon-wrap {
-      position: relative;
-    }
-
-    .input-icon-wrap svg {
-      position: absolute;
-      left: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 14px;
-      height: 14px;
-      color: #16a34a;
-      pointer-events: none;
-    }
-
-    .input-icon-wrap .form-input { padding-left: 30px; }
-
-    .priority-group {
-      display: flex;
-      gap: 4px;
-    }
-
-    .priority-btn {
-      flex: 1;
-      height: 28px;
-      border: 1px solid #e5e7eb;
-      border-radius: 6px;
-      background: #fff;
-      font-family: inherit;
-      font-size: 11px;
-      font-weight: 500;
-      color: #6b7280;
-      cursor: pointer;
-      transition: all 0.12s;
-    }
-
-    .priority-btn.selected {
-      background: #16a34a;
-      color: #fff;
-      border-color: #16a34a;
-    }
-
-    .priority-btn:hover:not(.selected) {
-      border-color: #16a34a;
-      color: #16a34a;
-    }
-
-    .form-textarea {
-      width: 100%;
-      height: 44px;
-      border: 1px solid #e5e7eb;
-      border-radius: 7px;
-      padding: 6px 10px;
-      font-size: 12px;
-      font-family: inherit;
-      background: #fff;
-      outline: none;
-      color: #111;
-      resize: none;
-    }
-
+    .form-input { width: 100%; height: 34px; border: 1px solid #e5e7eb; border-radius: 7px; padding: 0 10px; font-size: 12.5px; font-family: inherit; background: #fff; outline: none; color: #111; }
+    .form-input:focus { border-color: #16a34a; }
+    .form-textarea { width: 100%; height: 44px; border: 1px solid #e5e7eb; border-radius: 7px; padding: 6px 10px; font-size: 12px; font-family: inherit; background: #fff; outline: none; color: #111; resize: none; }
     .form-textarea:focus { border-color: #16a34a; }
 
-    .submit-btn {
-      width: 100%;
-      height: 38px;
-      background: #16a34a;
-      color: #fff;
-      border: none;
-      border-radius: 9px;
-      font-family: inherit;
-      font-size: 13.5px;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      cursor: pointer;
-      margin-top: 2px;
-      transition: background 0.12s;
-    }
-
+    .submit-btn { width: 100%; height: 38px; background: #16a34a; color: #fff; border: none; border-radius: 9px; font-family: inherit; font-size: 13.5px; font-weight: 600; letter-spacing: 0.02em; cursor: pointer; margin-top: 4px; transition: background 0.12s; flex-shrink: 0;}
     .submit-btn:hover { background: #15803d; }
     .submit-btn:active { transform: scale(0.98); }
 
-    /* ── Tickets (Fits Screen - No Scroll) ── */
-    .ticket-list {
-      flex: 1;
-      overflow-y: hidden;
-      padding: 0 14px 8px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-    }
+    /* ── Tickets ── */
+    .ticket-list { flex: 1; overflow-y: auto; padding: 0 14px 8px; display: flex; flex-direction: column; gap: 8px;}
+    .ticket { display: flex; gap: 10px; padding: 10px; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; align-items: flex-start; cursor: pointer; transition: border-color 0.15s; }
+    .ticket:hover { border-color: #cbd5e1; }
+    .ticket-thumb { width: 44px; height: 44px; border-radius: 8px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: #f1f5f9; font-size: 20px;}
+    
+    .ticket-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px;}
+    .ticket-meta { display: flex; justify-content: space-between; align-items: center; }
+    .ticket-time { font-size: 10px; font-weight: 600; color: #64748b; }
+    .ticket-id { font-size: 10px; font-weight: 500; color: #94a3b8; }
+    .ticket-title { font-size: 13px; font-weight: 600; color: #0f172a; line-height: 1.2; }
+    .ticket-loc { font-size: 11px; color: #64748b; display: flex; align-items: center; gap: 3px;}
+    .ticket-loc svg { width: 10px; height: 10px; }
 
-    .ticket {
-      display: flex;
-      gap: 10px;
-      padding: 8px 10px;
-      background: #fff;
-      border: 1px solid #f3f4f6;
-      border-radius: 10px;
-      margin-bottom: 5px;
-      align-items: center;
-    }
+    /* Upvote Button */
+    .upvote-btn { align-self: flex-start; margin-top: 4px; padding: 4px 8px; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 10px; font-weight: 600; color: #334155; display: flex; align-items: center; gap: 4px; cursor: pointer; transition: all 0.15s;}
+    .upvote-btn:hover:not(:disabled) { background: #e2e8f0; border-color: #94a3b8; }
+    .upvote-btn:active:not(:disabled) { transform: scale(0.96); }
+    .upvote-btn:disabled { opacity: 0.6; cursor: default; background: #f1f5f9; color: #16a34a; border-color: #bbf7d0;}
+    
+    /* ── Banners & Microcopy ── */
+    .guidance-banner { background: #f8fafc; border: 1px solid #e2e8f0; border-left: 3px solid #16a34a; border-radius: 7px; padding: 6px 10px; margin-bottom: 8px; font-size: 10.5px; color: #334155; line-height: 1.35; display: flex; align-items: flex-start; gap: 6px; }
+    .guidance-banner svg { width: 14px; height: 14px; color: #16a34a; flex-shrink: 0; margin-top: 1px; }
 
-    .ticket-thumb {
-      width: 40px;
-      height: 40px;
-      border-radius: 8px;
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .ticket-thumb svg { width: 17px; height: 17px; color: rgba(255,255,255,0.85); }
-
-    .ticket-body { flex: 1; min-width: 0; }
-
-    .ticket-meta {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 2px;
-    }
-
-    .ticket-id {
-      font-size: 10.5px;
-      font-weight: 600;
-      color: #6b7280;
-    }
-
-    .badge {
-      font-size: 8.5px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      padding: 1.5px 5px;
-      border-radius: 4px;
-    }
-
-    .badge-progress { background: #fef3c7; color: #b45309; }
-    .badge-resolved { background: #dcfce7; color: #15803d; }
-    .badge-submitted { background: #f3f4f6; color: #6b7280; }
-
-    .ticket-title {
-      font-size: 12px;
-      font-weight: 500;
-      color: #111;
-      line-height: 1.2;
-    }
-
-    .ticket-loc {
-      font-size: 10.5px;
-      color: #9ca3af;
-      margin-top: 1px;
-    }
-
-    /* ── Guidance Microcopy & Badges ── */
-    .brand-badge {
-      font-size: 10.5px;
-      font-weight: 500;
-      color: #15803d;
-      background: #dcfce7;
-      padding: 1.5px 6px;
-      border-radius: 10px;
-      margin-left: 2px;
-    }
-
-    .guidance-banner {
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      border-left: 3px solid #16a34a;
-      border-radius: 7px;
-      padding: 5px 9px;
-      margin-bottom: 6px;
-      font-size: 10.5px;
-      color: #334155;
-      line-height: 1.35;
-    }
-
-    .guidance-title {
-      display: flex;
-      align-items: flex-start;
-      gap: 6px;
-    }
-
-    .guidance-title svg {
-      width: 14px;
-      height: 14px;
-      color: #16a34a;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-
-    .map-hint-banner {
-      margin: 0 16px 6px;
-      background: #f0fdf4;
-      border: 1px solid #bbf7d0;
-      border-radius: 7px;
-      padding: 5px 8px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 10.5px;
-      color: #166534;
-      flex-shrink: 0;
-    }
-
-    .map-hint-banner svg {
-      width: 13px;
-      height: 13px;
-      color: #16a34a;
-      flex-shrink: 0;
-    }
-
-    .map-floating-pill {
-      position: absolute;
-      bottom: 8px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(4px);
-      padding: 4px 10px;
-      border-radius: 16px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      font-size: 10px;
-      color: #374151;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      white-space: nowrap;
-      z-index: 5;
-      pointer-events: none;
-    }
-
-    .pulse-dot {
-      width: 6px;
-      height: 6px;
-      background: #3b82f6;
-      border-radius: 50%;
-      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
-    }
-
-    .form-hint {
-      display: none; /* Accessible to screen readers via aria-describedby without taking screen space */
-    }
-
-    .submit-hint {
-      text-align: center;
-      font-size: 9.5px;
-      color: #64748b;
-      margin-top: 2px;
-      line-height: 1.2;
-    }
-
-    .tickets-subheader {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 2px 4px 8px;
-      font-size: 10.5px;
-      font-weight: 600;
-      color: #64748b;
-      letter-spacing: 0.04em;
-    }
-
-    .tickets-subheader .sub-hint {
-      font-weight: 500;
-      color: #16a34a;
-    }
-
-    .ticket-status-note {
-      display: block;
-      font-size: 10px;
-      color: #64748b;
-      margin-top: 2px;
-    }
-
-    .ticket {
-      cursor: pointer;
-      transition: border-color 0.15s, transform 0.1s;
-    }
-
-    .ticket:hover {
-      border-color: #cbd5e1;
-    }
-
-    .ticket:active {
-      transform: scale(0.99);
-    }
-
-    .nav-label {
-      font-size: 11px;
-      font-weight: 600;
-      line-height: 1.1;
-    }
-
-    .nav-sub {
-      font-size: 9px;
-      font-weight: 400;
-      opacity: 0.8;
-      letter-spacing: 0.01em;
-    }
-
-    /* ── Feedback Toast ── */
-    .toast {
-      position: absolute;
-      top: 60px;
-      left: 50%;
-      transform: translateX(-50%) translateY(-20px);
-      background: #111827;
-      color: #fff;
-      padding: 10px 16px;
-      border-radius: 12px;
-      font-size: 12px;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-      z-index: 100;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.25s, transform 0.25s;
-    }
-
-    .toast.show {
-      opacity: 1;
-      transform: translateX(-50%) translateY(0);
-    }
+    /* ── Toast ── */
+    .toast { position: absolute; top: 60px; left: 50%; transform: translateX(-50%) translateY(-20px); background: #111827; color: #fff; padding: 10px 16px; border-radius: 12px; font-size: 12px; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.25); z-index: 100; opacity: 0; pointer-events: none; transition: opacity 0.25s, transform 0.25s; text-align: center; width:max-content; max-width: 90%;}
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
     /* ── Bottom Nav ── */
-    .bottom-nav {
-      height: 62px;
-      display: flex;
-      border-top: 1px solid #e5e7eb;
-      flex-shrink: 0;
-      background: #fff;
-    }
-
-    .nav-btn {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 3px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-family: inherit;
-      font-size: 10px;
-      font-weight: 500;
-      color: #9ca3af;
-      transition: color 0.12s;
-    }
-
+    .bottom-nav { height: 62px; display: flex; border-top: 1px solid #e5e7eb; flex-shrink: 0; background: #fff; }
+    .nav-btn { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; background: none; border: none; cursor: pointer; font-family: inherit; font-size: 10px; font-weight: 500; color: #9ca3af; transition: color 0.12s; }
     .nav-btn.active { color: #16a34a; }
     .nav-btn svg { width: 22px; height: 22px; }
+    .home-bar { height: 20px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #fff; }
+    .home-bar span { width: 134px; height: 5px; background: #111; border-radius: 100px; opacity: 0.18; }
 
-    .home-bar {
-      height: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      background: #fff;
-    }
+    /* ── Modals ── */
+    .modal-backdrop { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(4px); z-index: 99; display: none; align-items: center; justify-content: center; padding: 16px; animation: fadeIn 0.15s ease-out; }
+    .modal-backdrop.active { display: flex; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .modal-card { background: #fff; border-radius: 20px; padding: 16px; width: 100%; max-width: 320px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25); animation: popUp 0.2s cubic-bezier(0.16, 1, 0.3, 1); position: relative; max-height: 90%; overflow-y: auto;}
+    @keyframes popUp { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    .modal-close-top { position: absolute; top: 12px; right: 12px; width: 26px; height: 26px; border-radius: 50%; background: #f1f5f9; display: flex; align-items: center; justify-content: center; border: none; cursor: pointer; color: #64748b; }
+    
+    .pin-photo-ph { width: 100%; height: 120px; background: #e2e8f0; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 40px; margin-bottom: 12px; }
+    .pin-meta-tag { display: inline-flex; align-items: center; gap: 4px; padding: 4px 8px; background: #f0fdf4; color: #15803d; border-radius: 6px; font-size: 11px; font-weight: 600; margin-bottom: 8px;}
+    .pin-title { font-size: 16px; font-weight: 700; margin-bottom: 4px;}
+    .pin-address { font-size: 12px; color: #64748b; margin-bottom: 8px; display: flex; align-items: center; gap: 4px;}
+    .pin-desc { font-size: 12px; color: #475569; line-height: 1.4; padding: 8px; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 12px;}
 
-    .home-bar span {
-      width: 134px;
-      height: 5px;
-      background: #111;
-      border-radius: 100px;
-      opacity: 0.18;
-    }
+    /* ── Accessibility ── */
+    :focus-visible { outline: 2px solid #16a34a !important; outline-offset: 2px !important; }
 
-    /* ── Modal & Dialogs (Validation Alarm & Thank You Feedback) ── */
-    .modal-backdrop {
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(4px);
-      z-index: 99;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 16px;
-      animation: fadeIn 0.18s ease-out;
-    }
+    /* Fixed zoom logic (no fixed container width overrides) */
+    body.large-text .brand, body.large-text .title, body.large-text .pin-title { font-size: 20px; }
+    body.large-text .form-label { font-size: 14.5px; }
+    body.large-text .form-hint { font-size: 11.5px; }
+    body.large-text .form-input, body.large-text .form-textarea, body.large-text .cat-btn { font-size: 14px; }
+    body.large-text .ticket-title { font-size: 15px; }
+    body.large-text .ticket-loc, body.large-text .ticket-time { font-size: 12px; }
+    body.large-text .guidance-banner { font-size: 13px; }
+    body.large-text .inapp-a11y-btn { font-size: 12px; }
+    
+    body.high-contrast { background: #0f172a; color: #fff; }
+    body.high-contrast .phone { box-shadow: 0 0 0 2px #fff, 0 20px 40px rgba(0,0,0,0.8); }
+    body.high-contrast .phone-screen, body.high-contrast .statusbar, body.high-contrast .bottom-nav, body.high-contrast .home-bar { background: #09090b; border-color: #27272a; }
+    body.high-contrast .ticket, body.high-contrast .form-input, body.high-contrast .form-textarea, body.high-contrast .cat-btn, body.high-contrast .modal-card { background: #18181b; color: #fff; border-color: #52525b; }
+    body.high-contrast .guidance-banner, body.high-contrast .pin-desc { background: #18181b; color: #f4f4f5; border-color: #22c55e; }
+    body.high-contrast .ticket-title, body.high-contrast .brand, body.high-contrast .title, body.high-contrast .form-label, body.high-contrast .pin-title { color: #fff; }
+    body.high-contrast .form-hint, body.high-contrast .ticket-loc { color: #cbd5e1; }
+    body.high-contrast .cat-btn.selected { background: #14532d; color: #bbf7d0; border-color:#22c55e;}
 
-    .modal-backdrop.active {
-      display: flex;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    .modal-card {
-      background: #fff;
-      border-radius: 20px;
-      padding: 18px 16px 14px;
-      width: 100%;
-      max-width: 300px;
-      text-align: center;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-      animation: popUp 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    @keyframes popUp {
-      from { transform: scale(0.92); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
-
-    .modal-icon-circle {
-      width: 46px;
-      height: 46px;
-      border-radius: 50%;
-      margin: 0 auto 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .modal-icon-circle.warning {
-      background: #fef2f2;
-      color: #dc2626;
-      border: 2px solid #fee2e2;
-    }
-
-    .modal-icon-circle.success {
-      background: #f0fdf4;
-      color: #16a34a;
-      border: 2px solid #dcfce7;
-    }
-
-    .modal-icon-circle svg {
-      width: 24px;
-      height: 24px;
-    }
-
-    .modal-title {
-      font-size: 15px;
-      font-weight: 700;
-      color: #111;
-      margin-bottom: 3px;
-    }
-
-    .modal-subtitle {
-      font-size: 11.5px;
-      color: #16a34a;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-
-    .modal-desc {
-      font-size: 11.5px;
-      color: #4b5563;
-      line-height: 1.35;
-      margin-bottom: 10px;
-    }
-
-    .ticket-receipt {
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      border-radius: 10px;
-      padding: 7px 10px;
-      margin-bottom: 10px;
-      text-align: left;
-      font-size: 10.5px;
-    }
-
-    .receipt-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 2.5px 0;
-      color: #4b5563;
-    }
-
-    .receipt-row strong,
-    .receipt-row span:last-child {
-      color: #111;
-    }
-
-    .modal-actions {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-    }
-
-    .modal-btn {
-      width: 100%;
-      height: 36px;
-      border-radius: 9px;
-      font-family: inherit;
-      font-size: 12.5px;
-      font-weight: 600;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      border: none;
-      transition: all 0.12s;
-    }
-
-    .modal-btn-primary {
-      background: #dc2626;
-      color: #fff;
-    }
-    .modal-btn-primary:hover { background: #b91c1c; }
-
-    .modal-btn-success {
-      background: #16a34a;
-      color: #fff;
-    }
-    .modal-btn-success:hover { background: #15803d; }
-
-    .modal-btn-secondary {
-      background: #f3f4f6;
-      color: #4b5563;
-    }
-    .modal-btn-secondary:hover { background: #e5e7eb; }
-
-    .photo-upload.error {
-      border-color: #dc2626 !important;
-      background: #fef2f2 !important;
-      animation: shake 0.35s ease-in-out;
-    }
-
-    @keyframes shake {
-      0%, 100% { transform: translateX(0); }
-      20%, 60% { transform: translateX(-5px); }
-      40%, 80% { transform: translateX(5px); }
-    }
-
-    /* ── Accessibility (WCAG 2.4.7 Focus Visible, 1.4.4 Resize, 1.4.3 Contrast) ── */
-    :focus-visible {
-      outline: 2px solid #16a34a !important;
-      outline-offset: 2px !important;
-    }
-
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-    }
-
-
-
-    /* Requirement 1: Readable Enlarged Text */
-    body.large-text .phone {
-      width: 410px;
-    }
-    body.large-text .brand,
-    body.large-text .title {
-      font-size: 20px;
-    }
-    body.large-text .form-label {
-      font-size: 14.5px;
-    }
-    body.large-text .form-hint,
-    body.large-text .submit-hint {
-      font-size: 12.5px;
-    }
-    body.large-text .form-input,
-    body.large-text .form-select,
-    body.large-text .form-textarea,
-    body.large-text .search-wrap input {
-      font-size: 15.5px;
-    }
-    body.large-text .ticket-title {
-      font-size: 14.5px;
-    }
-    body.large-text .ticket-loc,
-    body.large-text .ticket-status-note {
-      font-size: 12px;
-    }
-    body.large-text .guidance-banner {
-      font-size: 13px;
-    }
-    body.large-text .nav-label {
-      font-size: 12px;
-    }
-    body.large-text .nav-sub {
-      font-size: 10px;
-    }
-
-    /* Requirement 1: High Contrast Mode */
-    body.high-contrast {
-      background: #0f172a;
-      color: #fff;
-    }
-    body.high-contrast .page-title h1,
-    body.high-contrast .page-title p {
-      color: #f8fafc;
-    }
-
-    body.high-contrast .phone {
-      box-shadow: 0 0 0 2px #fff, 0 20px 40px rgba(0,0,0,0.8);
-    }
-    body.high-contrast .phone-screen {
-      background: #09090b;
-    }
-    body.high-contrast .statusbar,
-    body.high-contrast .bottom-nav,
-    body.high-contrast .home-bar {
-      background: #09090b;
-      border-color: #27272a;
-    }
-    body.high-contrast .ticket,
-    body.high-contrast .form-input,
-    body.high-contrast .form-select,
-    body.high-contrast .form-textarea,
-    body.high-contrast .search-wrap input,
-    body.high-contrast .filter-btn {
-      background: #18181b;
-      color: #fff;
-      border-color: #52525b;
-    }
-    body.high-contrast .guidance-banner {
-      background: #18181b;
-      color: #f4f4f5;
-      border-color: #22c55e;
-    }
-    body.high-contrast .ticket-title,
-    body.high-contrast .brand,
-    body.high-contrast .title,
-    body.high-contrast .form-label {
-      color: #fff;
-    }
-    body.high-contrast .form-hint,
-    body.high-contrast .ticket-loc,
-    body.high-contrast .ticket-status-note {
-      color: #cbd5e1;
-    }
-    body.high-contrast .badge-progress {
-      background: #78350f;
-      color: #fef3c7;
-    }
-    body.high-contrast .badge-resolved {
-      background: #14532d;
-      color: #bbf7d0;
-    }
-    body.high-contrast .badge-submitted {
-      background: #3f3f46;
-      color: #f4f4f5;
-    }
-
-    /* ── Mobile (100% Native App Feel - No Scroll) ── */
     @media (max-width: 600px) {
-      body {
-        padding: 0;
-        background: #fff;
-        height: 100%;
-        width: 100%;
-        overflow: hidden;
-        position: fixed;
-        inset: 0;
-      }
+      body { padding: 0; background: #fff; height: 100%; width: 100%; overflow: hidden; position: fixed; inset: 0; }
       .page-title, .page-footer { display: none !important; }
-      .phone {
-        width: 100vw;
-        height: 100vh;
-        height: 100dvh;
-        border-radius: 0;
-        padding: 0;
-        box-shadow: none;
-        background: #fff;
-        max-height: none;
-      }
-      .phone-screen {
-        border-radius: 0;
-        height: 100%;
-      }
+      .phone { width: 100vw; height: 100vh; height: 100dvh; border-radius: 0; padding: 0; box-shadow: none; background: #fff; max-height: none; }
+      .phone-screen { border-radius: 0; height: 100%; }
       .statusbar { height: 8px; }
       .dynamic-island { display: none; }
       .home-bar { height: 10px; }
@@ -1128,101 +209,110 @@
 <body>
 
   <div class="page-title">
-    <h1>
-      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
-      UrbanFix
-    </h1>
+    <h1><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg> UrbanFix</h1>
     <p>Road Safety Reporting — Prototype</p>
   </div>
 
   <div class="phone">
-    <div class="phone-screen" style="position: relative;" role="region" aria-label="UrbanFix Application Screen">
+    <div class="phone-screen" role="region" aria-label="UrbanFix Application Screen">
       <div class="statusbar" aria-hidden="true"><div class="dynamic-island"></div></div>
       <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-      <!-- Validation Alarm Modal (When no photo attached) -->
-      <div class="modal-backdrop" id="modal-alarm" role="dialog" aria-modal="true" aria-labelledby="alarm-title">
+      <!-- Modal: Pin Detail -->
+      <div class="modal-backdrop" id="modal-pin-detail" role="dialog" aria-modal="true" aria-labelledby="pin-detail-title">
         <div class="modal-card">
-          <div class="modal-icon-circle warning">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>
+          <button class="modal-close-top" onclick="closeModal('modal-pin-detail')" aria-label="Close">&#10005;</button>
+          <div class="pin-photo-ph" id="pin-detail-emoji">🚧</div>
+          <div class="pin-meta-tag" id="pin-detail-cat">Roads</div>
+          <h3 class="pin-title" id="pin-detail-title">Pothole</h3>
+          <div class="pin-address">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="12" height="12"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
+            <span id="pin-detail-loc">ul. Piotrkowska, 42</span>
           </div>
-          <div class="modal-title" id="alarm-title">Photo Required!</div>
-          <p class="modal-desc">
-            To prevent false alarms and ensure municipal repair crews dispatch the right equipment, please attach photo evidence before submitting.
-          </p>
-          <div class="modal-actions">
-            <button type="button" class="modal-btn modal-btn-primary" onclick="attachPhotoAndCloseAlarm()">
-              📸 Attach Photo Now
-            </button>
-            <button type="button" class="modal-btn modal-btn-secondary" onclick="closeAlarmModal()">
-              Close &amp; Review Form
-            </button>
-          </div>
+          <p class="pin-desc" id="pin-detail-desc">Description of the problem reported by the citizen.</p>
+          <button type="button" class="upvote-btn" style="width: 100%; justify-content: center; padding: 10px; font-size: 12px;" onclick="upvoteTicket(this, event)">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+            I saw this too / Confirm
+          </button>
         </div>
       </div>
 
-      <!-- Thank You Success Modal (When report is successfully submitted) -->
+      <!-- Modal: Quick Report (Map Click) -->
+      <div class="modal-backdrop" id="modal-quick-report" role="dialog" aria-modal="true" aria-labelledby="quick-report-title">
+        <div class="modal-card" style="padding: 20px 16px;">
+          <button class="modal-close-top" onclick="closeModal('modal-quick-report')" aria-label="Close">&#10005;</button>
+          <h3 class="pin-title" id="quick-report-title" style="margin-bottom: 12px; font-size: 18px;">Quick Report</h3>
+          <div class="pin-address" style="margin-bottom: 16px;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
+            <span id="quick-report-loc" style="font-weight: 600; color:#111;">Selected location...</span>
+          </div>
+          
+          <label class="form-label">1. Photo (Optional)</label>
+          <div class="photo-upload" id="photo-upload-quick" onclick="simulateUpload(this, 'photo-label-quick')" style="margin-bottom: 12px;">
+            <div class="photo-icons">
+              <div class="icon-circle"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z"/><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z"/></svg></div>
+            </div>
+            <span id="photo-label-quick">Take or Upload Photo</span>
+          </div>
+          
+          <label class="form-label">2. Category</label>
+          <div class="category-grid" style="margin-bottom: 12px;">
+            <button type="button" class="cat-btn selected" onclick="pickCategory(this)"><span class="emoji">🚧</span> Roads</button>
+            <button type="button" class="cat-btn" onclick="pickCategory(this)"><span class="emoji">🗑️</span> Waste</button>
+            <button type="button" class="cat-btn" onclick="pickCategory(this)"><span class="emoji">💡</span> Lights</button>
+            <button type="button" class="cat-btn" onclick="pickCategory(this)"><span class="emoji">⚠️</span> Other</button>
+          </div>
+          
+          <label class="form-label">3. Short Details</label>
+          <textarea class="form-textarea" id="quick-desc" placeholder="E.g., Pothole in the middle of the lane..." style="margin-bottom: 12px;"></textarea>
+          
+          <button class="submit-btn" onclick="submitQuickReport()">Submit Report</button>
+        </div>
+      </div>
+
+      <!-- Thank You Success Modal -->
       <div class="modal-backdrop" id="modal-success" role="dialog" aria-modal="true" aria-labelledby="success-title">
-        <div class="modal-card">
-          <div class="modal-icon-circle success">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+        <div class="modal-card" style="text-align: center;">
+          <div class="icon-circle" style="width: 46px; height:46px; margin: 0 auto 12px; background: #f0fdf4; color:#16a34a; border:2px solid #dcfce7;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
           </div>
-          <div class="modal-title" id="success-title">Thank You, Citizen!</div>
-          <div class="modal-subtitle">Your report was successfully filed</div>
-          <div class="ticket-receipt">
-            <div class="receipt-row"><span>Ticket ID:</span> <strong id="receipt-id">#UF-1050</strong></div>
-            <div class="receipt-row"><span>Status:</span> <span class="badge badge-submitted">SUBMITTED</span></div>
-            <div class="receipt-row"><span>Category:</span> <span id="receipt-category">Road &amp; Pavement</span></div>
-            <div class="receipt-row"><span>Location:</span> <span id="receipt-location">ul. Rembielińskiego, 42</span></div>
-          </div>
-          <p class="modal-desc" style="margin-bottom: 10px;">
-            The City of Łódź road maintenance department has been notified. You can track live updates in the Tickets Tracker.
-          </p>
-          <div class="modal-actions">
-            <button type="button" class="modal-btn modal-btn-success" onclick="closeSuccessAndGoToTickets()">
-              View in Tickets Tracker →
-            </button>
-          </div>
+          <h3 class="pin-title" id="success-title">Thank You, Citizen!</h3>
+          <p style="font-size: 12px; color: #4b5563; margin: 8px 0 16px;">The report was submitted and added to the Public Tracker. It will help make the city safer.</p>
+          <button type="button" class="submit-btn" onclick="closeModal('modal-success'); switchView('tickets');">Go to Tracker</button>
         </div>
       </div>
 
-      <!-- ═══════ MAP ═══════ -->
+      <!-- ═══════ MAPPA ═══════ -->
       <div class="view active" id="view-map" role="tabpanel" aria-labelledby="tab-map">
         <div class="app-bar">
           <div class="brand-group">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
             <span class="brand">UrbanFix</span>
-            <span class="brand-badge">Łódź</span>
+            <span class="brand-badge" style="margin-left: 2px;">Łódź</span>
           </div>
-          <div class="inapp-a11y-group" role="group" aria-label="Accessibility options">
-            <button type="button" class="inapp-a11y-btn btn-text-toggle" onclick="toggleLargeText()" title="Requirement 1: Enlarge text size (WCAG 1.4.4)" aria-label="Toggle larger text size" aria-pressed="false">A+</button>
-            <button type="button" class="inapp-a11y-btn btn-contrast-toggle" onclick="toggleContrast()" title="Requirement 1: High contrast mode (WCAG 1.4.3)" aria-label="Toggle high contrast mode" aria-pressed="false">◐</button>
+          <div class="inapp-a11y-group">
+            <button type="button" class="inapp-a11y-btn" onclick="showToast('Polish localization will be available in the final Android app')" aria-label="Switch Language">EN/PL</button>
+            <button type="button" class="inapp-a11y-btn btn-text-toggle" onclick="toggleLargeText()" aria-label="Enlarge text">A+</button>
+            <button type="button" class="inapp-a11y-btn btn-contrast-toggle" onclick="toggleContrast()" aria-label="High contrast">◐</button>
           </div>
         </div>
 
         <div class="search">
           <div class="search-wrap">
-            <label for="map-search" class="sr-only">Search a street in Łódź to inspect road hazards</label>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-            <input type="text" id="map-search" placeholder="Search a street to check road safety (e.g. Piotrkowska)...">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            <input type="text" id="map-search" placeholder="Search a street (e.g. Piotrkowska)...">
           </div>
         </div>
 
-        <div class="map-hint-banner">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"/></svg>
-          <span><strong>Interactive Map:</strong> Tap pins for issue status, or tap <strong>'Report'</strong> below to file a new issue.</span>
-        </div>
-
-        <div class="map-area">
+        <div class="map-area" id="interactive-map" onclick="handleMapClick(event)" title="Click on a point on the map to report">
           <svg class="map-bg" viewBox="0 0 315 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
             <rect width="315" height="500" fill="#dde8dd"/>
-            <!-- Roads H -->
+            <!-- Roads -->
             <rect y="80" width="315" height="10" fill="#edf2ed"/>
             <rect y="175" width="315" height="12" fill="#edf2ed"/>
             <rect y="270" width="315" height="10" fill="#edf2ed"/>
             <rect y="360" width="315" height="10" fill="#edf2ed"/>
             <rect y="440" width="315" height="10" fill="#edf2ed"/>
-            <!-- Roads V -->
             <rect x="75" width="10" height="500" fill="#edf2ed"/>
             <rect x="158" width="12" height="500" fill="#edf2ed"/>
             <rect x="245" width="10" height="500" fill="#edf2ed"/>
@@ -1235,7 +325,6 @@
             <rect x="91" y="96" width="61" height="73" rx="4" fill="#d2ddd2"/>
             <rect x="176" y="96" width="63" height="73" rx="4" fill="#d2ddd2"/>
             <rect x="261" y="96" width="48" height="73" rx="4" fill="#d2ddd2"/>
-            <!-- Park -->
             <rect x="6" y="193" width="63" height="71" rx="4" fill="#bdd4bd"/>
             <rect x="91" y="193" width="61" height="71" rx="4" fill="#d2ddd2"/>
             <rect x="176" y="193" width="63" height="71" rx="4" fill="#d2ddd2"/>
@@ -1243,7 +332,6 @@
             <rect x="6" y="286" width="63" height="68" rx="4" fill="#d2ddd2"/>
             <rect x="91" y="286" width="61" height="68" rx="4" fill="#d2ddd2"/>
             <rect x="176" y="286" width="63" height="68" rx="4" fill="#d2ddd2"/>
-            <!-- Park 2 -->
             <rect x="261" y="286" width="48" height="68" rx="4" fill="#bdd4bd"/>
             <rect x="6" y="376" width="63" height="58" rx="4" fill="#d2ddd2"/>
             <rect x="91" y="376" width="61" height="58" rx="4" fill="#d2ddd2"/>
@@ -1253,318 +341,210 @@
             <rect x="91" y="456" width="61" height="38" rx="4" fill="#d2ddd2"/>
             <rect x="176" y="456" width="63" height="38" rx="4" fill="#d2ddd2"/>
             <rect x="261" y="456" width="48" height="38" rx="4" fill="#d2ddd2"/>
-            <!-- Street names -->
-            <text x="108" y="77" fill="#8a9a8a" font-size="7" font-family="Inter,sans-serif" font-weight="500">UL. REMBIELIŃSKIEGO</text>
-            <text x="115" y="172" fill="#8a9a8a" font-size="7" font-family="Inter,sans-serif" font-weight="500">UL. PIOTRKOWSKA</text>
-            <text x="110" y="267" fill="#8a9a8a" font-size="7" font-family="Inter,sans-serif" font-weight="500">UL. NARUTOWICZA</text>
-            <text x="112" y="357" fill="#8a9a8a" font-size="7" font-family="Inter,sans-serif" font-weight="500">UL. ŻEROMSKIEGO</text>
+            <text x="108" y="77" fill="#8a9a8a" font-size="7" font-weight="500">UL. REMBIELIŃSKIEGO</text>
+            <text x="115" y="172" fill="#8a9a8a" font-size="7" font-weight="500">UL. PIOTRKOWSKA</text>
+            <text x="110" y="267" fill="#8a9a8a" font-size="7" font-weight="500">UL. NARUTOWICZA</text>
+            <text x="112" y="357" fill="#8a9a8a" font-size="7" font-weight="500">UL. ŻEROMSKIEGO</text>
           </svg>
 
-          <!-- Markers with interactive click hints -->
-          <div class="pin" style="left:52%;top:18%;cursor:pointer" onclick="showToast('📍 Pothole on Rembielińskiego · Status: Open (Reviewing)')">
+          <!-- Interactive Pins -->
+          <div class="pin" style="left:52%;top:18%;" onclick="openPinDetail(event, '🚧 Roads', 'ul. Rembielińskiego, Intersection', 'Very deep pothole in the middle of the lane, dangerous for bikes.', '🚧')">
             <svg viewBox="0 0 26 32" fill="none"><path d="M13 0C5.82 0 0 5.82 0 13c0 9.75 13 19 13 19s13-9.25 13-19C26 5.82 20.18 0 13 0z" fill="#dc2626"/><circle cx="13" cy="12" r="4.5" fill="#fff"/></svg>
-            <div class="pin-label"><span class="status-text open">Open</span> · Pothole</div>
           </div>
 
-          <div class="pin" style="left:26%;top:42%;cursor:pointer" onclick="showToast('📍 Street Light on Narutowicza · Status: In Progress')">
+          <div class="pin" style="left:26%;top:42%;" onclick="openPinDetail(event, '💡 Lights', 'ul. Narutowicza, 12', 'Street light completely off for two nights.', '💡')">
             <svg viewBox="0 0 26 32" fill="none"><path d="M13 0C5.82 0 0 5.82 0 13c0 9.75 13 19 13 19s13-9.25 13-19C26 5.82 20.18 0 13 0z" fill="#d97706"/><circle cx="13" cy="12" r="4.5" fill="#fff"/></svg>
-            <div class="pin-label"><span class="status-text progress">In Progress</span> · Street Light</div>
           </div>
 
-          <div class="pin" style="left:78%;top:22%;cursor:pointer" onclick="showToast('📍 Sidewalk on Piotrkowska · Status: Resolved (Fixed)')">
+          <div class="pin" style="left:78%;top:22%;" onclick="openPinDetail(event, '🗑️ Waste', 'ul. Piotrkowska', 'Overflowing bin, trash on the sidewalk.', '🗑️')">
             <svg viewBox="0 0 26 32" fill="none"><path d="M13 0C5.82 0 0 5.82 0 13c0 9.75 13 19 13 19s13-9.25 13-19C26 5.82 20.18 0 13 0z" fill="#16a34a"/><circle cx="13" cy="12" r="4.5" fill="#fff"/></svg>
-            <div class="pin-label"><span class="status-text resolved">Resolved</span> · Sidewalk</div>
-          </div>
-
-          <div class="pin" style="left:62%;top:58%;cursor:pointer" onclick="showToast('📍 Missing sign on Żeromskiego · Status: Open')">
-            <svg viewBox="0 0 26 32" fill="none"><path d="M13 0C5.82 0 0 5.82 0 13c0 9.75 13 19 13 19s13-9.25 13-19C26 5.82 20.18 0 13 0z" fill="#dc2626"/><circle cx="13" cy="12" r="4.5" fill="#fff"/></svg>
-          </div>
-
-          <div class="pin" style="left:35%;top:72%;cursor:pointer" onclick="showToast('📍 Waste debris on Kościuszki · Status: In Progress')">
-            <svg viewBox="0 0 26 32" fill="none"><path d="M13 0C5.82 0 0 5.82 0 13c0 9.75 13 19 13 19s13-9.25 13-19C26 5.82 20.18 0 13 0z" fill="#d97706"/><circle cx="13" cy="12" r="4.5" fill="#fff"/></svg>
           </div>
 
           <!-- User location -->
-          <div class="user-loc" style="left:48%;top:48%;cursor:pointer" onclick="showToast('📍 You are here: ul. Rembielińskiego, Łódź')">
+          <div class="user-loc" style="left:48%;top:48%;">
             <div class="pulse"><div class="dot"></div></div>
-          </div>
-
-          <!-- Floating Map Info Pill -->
-          <div class="map-floating-pill">
-            <span class="pulse-dot"></span>
-            <span>Current: <strong>ul. Rembielińskiego</strong> · 3 nearby hazards</span>
           </div>
         </div>
       </div>
 
-      <!-- ═══════ REPORT ═══════ -->
+      <!-- ═══════ SEGNALA (REPORT) ═══════ -->
       <div class="view" id="view-report" role="tabpanel" aria-labelledby="tab-report">
         <div class="view-header">
-          <button class="header-back-btn" title="Return to interactive map" onclick="switchView('map',document.querySelectorAll('.nav-btn')[0])">&#8592; Back</button>
-          <span class="title">Report Hazard</span>
-          <div class="inapp-a11y-group" role="group" aria-label="Accessibility options">
-            <button type="button" class="inapp-a11y-btn btn-text-toggle" onclick="toggleLargeText()" title="Requirement 1: Enlarge text size (WCAG 1.4.4)" aria-label="Toggle larger text size" aria-pressed="false">A+</button>
-            <button type="button" class="inapp-a11y-btn btn-contrast-toggle" onclick="toggleContrast()" title="Requirement 1: High contrast mode (WCAG 1.4.3)" aria-label="Toggle high contrast mode" aria-pressed="false">◐</button>
+          <button class="header-back-btn" onclick="switchView('map', document.querySelectorAll('.nav-btn')[0])">&#8592; Map</button>
+          <span class="title">New Report</span>
+          <div class="inapp-a11y-group">
+            <button type="button" class="inapp-a11y-btn" onclick="showToast('Polish localization will be available in the final Android app')" aria-label="Switch Language">EN/PL</button>
+            <button type="button" class="inapp-a11y-btn btn-text-toggle" onclick="toggleLargeText()">A+</button>
+            <button type="button" class="inapp-a11y-btn btn-contrast-toggle" onclick="toggleContrast()">◐</button>
           </div>
         </div>
 
         <div class="form-scroll">
-          <div class="guidance-banner">
-            <div class="guidance-title">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"/></svg>
-              <span><strong>Report Road Hazard:</strong> Fill out the 5 steps below to notify Łódź municipal road repair crews.</span>
-            </div>
-          </div>
-
           <div class="form-section">
-            <label class="form-label" id="label-photo">1. Photo Evidence</label>
-            <p class="form-hint" id="hint-photo">Click the box below to attach a photo showing the hazard</p>
-            <div class="photo-upload" id="photo-upload-box" role="button" tabindex="0" aria-labelledby="label-photo" aria-describedby="hint-photo" onclick="simulateUpload(this)" onkeydown="if(event.key==='Enter'||event.key===' ')simulateUpload(this)" title="Click to attach photo">
-              <div class="photo-icons" aria-hidden="true">
-                <div class="icon-circle">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z"/><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z"/></svg>
-                </div>
-                <div class="icon-circle">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z"/></svg>
-                </div>
+            <label class="form-label">1. Photo (Optional)</label>
+            <p class="form-hint">Photos are not mandatory, but they help verify and prioritize the intervention.</p>
+            <div class="photo-upload" id="photo-upload-main" onclick="simulateUpload(this, 'photo-label-main')">
+              <div class="photo-icons">
+                <div class="icon-circle"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z"/><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z"/></svg></div>
               </div>
-              <span id="photo-label">Tap to Take Photo or Upload Image</span>
+              <span id="photo-label-main">Take or Upload Photo</span>
             </div>
           </div>
 
           <div class="form-section">
-            <label class="form-label" for="report-location">2. Hazard Location (GPS)</label>
-            <p class="form-hint" id="hint-location">Automatically detected from your phone · Precise location for dispatch</p>
-            <div class="input-icon-wrap">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
-              <input type="text" id="report-location" class="form-input" value="ul. Rembielińskiego, 42" readonly aria-describedby="hint-location" title="Auto-detected GPS location">
+            <label class="form-label">2. Category</label>
+            <div class="category-grid" id="main-cat-grid">
+              <button type="button" class="cat-btn selected" onclick="pickCategory(this)"><span class="emoji">🚧</span> Roads</button>
+              <button type="button" class="cat-btn" onclick="pickCategory(this)"><span class="emoji">🗑️</span> Waste</button>
+              <button type="button" class="cat-btn" onclick="pickCategory(this)"><span class="emoji">💡</span> Lights</button>
+              <button type="button" class="cat-btn" onclick="pickCategory(this)"><span class="emoji">⚠️</span> Other</button>
             </div>
           </div>
 
           <div class="form-section">
-            <label class="form-label" for="report-category">3. Hazard Category</label>
-            <p class="form-hint" id="hint-category">Select hazard type so it reaches the right maintenance crew</p>
-            <select class="form-select" id="report-category" aria-describedby="hint-category" title="Choose hazard category">
-              <option>Road &amp; Pavement (Potholes, cracks)</option>
-              <option>Street Lighting (Dark street, lamp broken)</option>
-              <option>Signage &amp; Signals (Missing signs, traffic lights)</option>
-              <option>Sidewalk &amp; Pedestrian Crossings</option>
-              <option>Cleanliness &amp; Road Debris</option>
-              <option>Other Road Safety Hazard</option>
-            </select>
-          </div>
-
-          <div class="form-section">
-            <label class="form-label" id="label-priority">4. Urgency Level</label>
-            <p class="form-hint" id="hint-priority">Select severity (choose 'Urgent' if immediate accident risk exists)</p>
-            <div class="priority-group" role="radiogroup" aria-labelledby="label-priority" aria-describedby="hint-priority">
-              <button type="button" class="priority-btn" role="radio" aria-checked="false" onclick="pickPriority(this)" title="Minor issue, does not affect traffic flow">Low</button>
-              <button type="button" class="priority-btn selected" role="radio" aria-checked="true" onclick="pickPriority(this)" title="Noticeable hazard, needs scheduled repair">Medium</button>
-              <button type="button" class="priority-btn" role="radio" aria-checked="false" onclick="pickPriority(this)" title="Significant danger, requires fast intervention">High</button>
-              <button type="button" class="priority-btn" role="radio" aria-checked="false" onclick="pickPriority(this)" title="Critical danger, risk of accident or injury">Urgent</button>
+            <label class="form-label">3. Location</label>
+            <div class="loc-controls">
+              <div class="loc-buttons">
+                <button type="button" class="loc-btn" onclick="setLocGPS()"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg> Current GPS</button>
+                <button type="button" class="loc-btn" onclick="switchView('map'); showToast('Click on the map to report')"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7l6-3 5.447 2.724A1 1 0 0121 7.618v10.764a1 1 0 01-1.447.894L15 17l-6 3z"/></svg> Map</button>
+              </div>
+              <input type="text" id="report-location" class="form-input" placeholder="Or type street/place (e.g. ul. Piotrkowska, 42)">
             </div>
           </div>
 
           <div class="form-section">
-            <label class="form-label" for="report-description">5. Description &amp; Details</label>
-            <p class="form-hint" id="hint-description">Describe dimensions, exact lane, or landmarks to help workers find it</p>
-            <textarea class="form-textarea" id="report-description" aria-describedby="hint-description" placeholder="Describe the issue...">Pothole approximately 20 cm deep near the crosswalk...</textarea>
+            <label class="form-label">4. Description</label>
+            <textarea class="form-textarea" id="report-description" placeholder="Add details to help the maintenance crew..."></textarea>
           </div>
 
-          <button class="submit-btn" onclick="submitReport(event)">SUBMIT REPORT</button>
-          <p class="submit-hint">✓ Tapping 'Submit' generates a ticket and adds it to the Tracker tab.</p>
+          <button class="submit-btn" onclick="submitFullReport()">Submit Report</button>
         </div>
       </div>
 
-      <!-- ═══════ TICKETS ═══════ -->
+      <!-- ═══════ TICKETS TRACKER ═══════ -->
       <div class="view" id="view-tickets" role="tabpanel" aria-labelledby="tab-tickets">
         <div class="view-header">
           <span class="title" style="position: static; transform: none;">Tickets Tracker</span>
-          <div class="inapp-a11y-group" role="group" aria-label="Accessibility options">
-            <button type="button" class="inapp-a11y-btn btn-text-toggle" onclick="toggleLargeText()" title="Requirement 1: Enlarge text size (WCAG 1.4.4)" aria-label="Toggle larger text size" aria-pressed="false">A+</button>
-            <button type="button" class="inapp-a11y-btn btn-contrast-toggle" onclick="toggleContrast()" title="Requirement 1: High contrast mode (WCAG 1.4.3)" aria-label="Toggle high contrast mode" aria-pressed="false">◐</button>
+          <div class="inapp-a11y-group">
+            <button type="button" class="inapp-a11y-btn" onclick="showToast('Polish localization will be available in the final Android app')" aria-label="Switch Language">EN/PL</button>
+            <button type="button" class="inapp-a11y-btn btn-text-toggle" onclick="toggleLargeText()">A+</button>
+            <button type="button" class="inapp-a11y-btn btn-contrast-toggle" onclick="toggleContrast()">◐</button>
           </div>
         </div>
 
-        <div class="guidance-banner" style="margin: 0 16px 10px;">
-          <div class="guidance-title">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            <span><strong>Live Resolution Tracker:</strong> Check repair progress for road hazards reported by citizens in Łódź.</span>
-          </div>
+        <div class="guidance-banner" style="margin: 0 16px 8px;">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+          <span><strong>Cleanup Policy:</strong> Unconfirmed issues older than 30 days are automatically removed from the map to keep data fresh.</span>
         </div>
 
-        <div class="search">
-          <div class="search-row">
-            <div class="search-wrap">
-              <label for="ticket-search" class="sr-only">Search tickets by street name or ticket ID</label>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-              <input type="text" id="ticket-search" oninput="filterTickets(this.value)" placeholder="Search tickets by street name or ID (e.g. #UF-1042)...">
-            </div>
-            <button class="filter-btn" title="Filter by status: In Progress, Resolved, Submitted" aria-label="Filter tickets by status" onclick="showToast('Status filter: Showing all tickets')">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"/></svg>
-            </button>
-          </div>
-        </div>
-
-        <div class="ticket-list">
-          <div class="tickets-subheader">
-            <span>CITY REPORTS (<span id="ticket-count">5</span>)</span>
-            <span class="sub-hint">Tap any card to inspect status</span>
-          </div>
-
-          <div class="ticket" onclick="showToast('Viewing ticket #UF-1042: Road repair scheduled')">
-            <div class="ticket-thumb" style="background:#374151">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>
-            </div>
+        <div class="ticket-list" id="ticket-container">
+          <!-- Ticket 1: Relativo (< 7 gg) -->
+          <div class="ticket">
+            <div class="ticket-thumb">🚧</div>
             <div class="ticket-body">
               <div class="ticket-meta">
-                <span class="ticket-id">#UF-1042</span>
-                <span class="badge badge-progress">In Progress</span>
+                <span class="ticket-title">Roads</span>
+                <span class="ticket-time">Reported 3 days ago</span>
               </div>
-              <div class="ticket-title">Road Damage / Pothole</div>
-              <div class="ticket-loc">ul. Rembielińskiego, near intersection</div>
-              <span class="ticket-status-note">Work crew assigned · Repair scheduled</span>
+              <div class="ticket-loc">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+                ul. Rembielińskiego
+              </div>
+              <button type="button" class="upvote-btn" onclick="upvoteTicket(this, event)">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="12" height="12"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.5 12.75l6 6 9-13.5" /></svg> I saw this too
+              </button>
             </div>
           </div>
 
-          <div class="ticket" onclick="showToast('Viewing ticket #UF-1019: Repaired and closed')">
-            <div class="ticket-thumb" style="background:#1e3a5f">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"/></svg>
-            </div>
+          <!-- Ticket 2: Assoluto (> 7 gg) -->
+          <div class="ticket">
+            <div class="ticket-thumb">💡</div>
             <div class="ticket-body">
               <div class="ticket-meta">
-                <span class="ticket-id">#UF-1019</span>
-                <span class="badge badge-resolved">Resolved</span>
+                <span class="ticket-title">Lights</span>
+                <span class="ticket-time">Reported Oct 12</span>
               </div>
-              <div class="ticket-title">Street Light Out</div>
-              <div class="ticket-loc">Plac Wolności</div>
-              <span class="ticket-status-note">Bulb replaced &amp; verified by municipal team</span>
+              <div class="ticket-loc">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+                Plac Wolności
+              </div>
+              <button type="button" class="upvote-btn" onclick="upvoteTicket(this, event)">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="12" height="12"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.5 12.75l6 6 9-13.5" /></svg> I saw this too
+              </button>
             </div>
           </div>
 
-          <div class="ticket" onclick="showToast('Viewing ticket #UF-0988: Pending inspection')">
-            <div class="ticket-thumb" style="background:#5c5c5c">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>
-            </div>
+          <!-- Ticket 3: Assoluto (> 7 gg) -->
+          <div class="ticket">
+            <div class="ticket-thumb">🗑️</div>
             <div class="ticket-body">
               <div class="ticket-meta">
-                <span class="ticket-id">#UF-0988</span>
-                <span class="badge badge-submitted">Submitted</span>
+                <span class="ticket-title">Waste</span>
+                <span class="ticket-time">Reported Oct 8</span>
               </div>
-              <div class="ticket-title">Broken Sidewalk Curb</div>
-              <div class="ticket-loc">ul. Piotrkowska, 15</div>
-              <span class="ticket-status-note">Under municipal review · Awaiting triage</span>
+              <div class="ticket-loc">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+                ul. Piotrkowska, 15
+              </div>
+              <button type="button" class="upvote-btn" onclick="upvoteTicket(this, event)">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="12" height="12"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.5 12.75l6 6 9-13.5" /></svg> I saw this too
+              </button>
             </div>
           </div>
 
-          <div class="ticket" onclick="showToast('Viewing ticket #UF-0971: Sign ordered')">
-            <div class="ticket-thumb" style="background:#6b4c2a">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>
-            </div>
-            <div class="ticket-body">
-              <div class="ticket-meta">
-                <span class="ticket-id">#UF-0971</span>
-                <span class="badge badge-progress">In Progress</span>
-              </div>
-              <div class="ticket-title">Missing Road Sign</div>
-              <div class="ticket-loc">al. Kościuszki, 40</div>
-              <span class="ticket-status-note">Replacement sign ordered and dispatched</span>
-            </div>
-          </div>
-
-          <div class="ticket" onclick="showToast('Viewing ticket #UF-0953: Cleared')">
-            <div class="ticket-thumb" style="background:#2d4a2d">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"/></svg>
-            </div>
-            <div class="ticket-body">
-              <div class="ticket-meta">
-                <span class="ticket-id">#UF-0953</span>
-                <span class="badge badge-resolved">Resolved</span>
-              </div>
-              <div class="ticket-title">Overflowing Bin / Road Waste</div>
-              <div class="ticket-loc">al. Politechniki, 12</div>
-              <span class="ticket-status-note">Cleared &amp; area sanitized by city cleaning</span>
-            </div>
-          </div>
         </div>
       </div>
 
-      <!-- ═══════ NAV ═══════ -->
-      <nav class="bottom-nav" role="tablist" aria-label="Main application sections">
-        <button class="nav-btn active" id="tab-map" role="tab" aria-selected="true" aria-controls="view-map" title="Interactive map showing road safety hazards" onclick="switchView('map',this)">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>
+      <!-- ═══════ BOTTOM NAV ═══════ -->
+      <nav class="bottom-nav" role="tablist">
+        <button class="nav-btn active" id="tab-map" role="tab" aria-selected="true" onclick="switchView('map',this)">
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>
           <span class="nav-label">Home</span>
-          <span class="nav-sub">Hazard Map</span>
         </button>
-        <button class="nav-btn" id="tab-report" role="tab" aria-selected="false" aria-controls="view-report" title="Submit a new road safety hazard report" onclick="switchView('report',this)">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <button class="nav-btn" id="tab-report" role="tab" aria-selected="false" onclick="switchView('report',this)">
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           <span class="nav-label">Report</span>
-          <span class="nav-sub">+ New Hazard</span>
         </button>
-        <button class="nav-btn" id="tab-tickets" role="tab" aria-selected="false" aria-controls="view-tickets" title="Track status and progress of reported issues" onclick="switchView('tickets',this)">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>
-          <span class="nav-label">Tickets</span>
-          <span class="nav-sub">Track Status</span>
+        <button class="nav-btn" id="tab-tickets" role="tab" aria-selected="false" onclick="switchView('tickets',this)">
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>
+          <span class="nav-label">Tracker</span>
         </button>
       </nav>
       <div class="home-bar" aria-hidden="true"><span></span></div>
     </div>
   </div>
 
-  <p class="page-footer">University Project · Introduction to Mobile Systems · Accessible Road Safety UI</p>
-
   <script>
-    function toggleLargeText() {
-      const isLarge = document.body.classList.toggle('large-text');
-      document.querySelectorAll('.btn-text-toggle').forEach(btn => {
-        btn.classList.toggle('active', isLarge);
-        btn.setAttribute('aria-pressed', isLarge ? 'true' : 'false');
-      });
-      showToast(isLarge ? '🔍 Large Text ON (WCAG 1.4.4)' : 'Standard text size restored');
-    }
-
-    function toggleContrast() {
-      const isDark = document.body.classList.toggle('high-contrast');
-      document.querySelectorAll('.btn-contrast-toggle').forEach(btn => {
-        btn.classList.toggle('active', isDark);
-        btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
-      });
-      showToast(isDark ? '◐ High Contrast ON (WCAG 1.4.3)' : 'Standard contrast restored');
-    }
-
+    // --- View Switcher ---
     function switchView(name, btn) {
       document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
       const targetView = document.getElementById('view-' + name);
       if (targetView) targetView.classList.add('active');
 
       const buttons = document.querySelectorAll('.nav-btn');
-      buttons.forEach(b => {
-        b.classList.remove('active');
-        b.setAttribute('aria-selected', 'false');
-      });
+      buttons.forEach(b => b.classList.remove('active'));
 
-      if (btn) {
-        btn.classList.add('active');
-        btn.setAttribute('aria-selected', 'true');
-      } else {
+      if (btn) btn.classList.add('active');
+      else {
         const index = name === 'map' ? 0 : (name === 'report' ? 1 : 2);
-        if (buttons[index]) {
-          buttons[index].classList.add('active');
-          buttons[index].setAttribute('aria-selected', 'true');
-        }
+        if (buttons[index]) buttons[index].classList.add('active');
       }
     }
 
-    function pickPriority(btn) {
-      const group = btn.parentElement.querySelectorAll('.priority-btn');
-      group.forEach(b => {
-        b.classList.remove('selected');
-        b.setAttribute('aria-checked', 'false');
-      });
-      btn.classList.add('selected');
-      btn.setAttribute('aria-checked', 'true');
+    // --- Accessibility Toggles ---
+    function toggleLargeText() {
+      const isLarge = document.body.classList.toggle('large-text');
+      document.querySelectorAll('.btn-text-toggle').forEach(btn => btn.classList.toggle('active', isLarge));
+      showToast(isLarge ? '🔍 Large Text ON' : 'Standard text size restored');
     }
 
+    function toggleContrast() {
+      const isDark = document.body.classList.toggle('high-contrast');
+      document.querySelectorAll('.btn-contrast-toggle').forEach(btn => btn.classList.toggle('active', isDark));
+      showToast(isDark ? '◐ High Contrast ON' : 'Standard contrast restored');
+    }
+
+    // --- Toast Notifications ---
     function showToast(text) {
       const toast = document.getElementById('toast');
       if (!toast) return;
@@ -1573,133 +553,196 @@
       setTimeout(() => toast.classList.remove('show'), 2600);
     }
 
-    let photoAttached = false;
+    // --- Modal Management ---
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) modal.classList.remove('active');
+    }
 
-    function simulateUpload(elem) {
-      if (!elem) elem = document.getElementById('photo-upload-box');
-      photoAttached = true;
-      if (elem) {
-        elem.classList.remove('error');
-        elem.style.borderColor = '#16a34a';
-        elem.style.background = '#f0fdf4';
+    // --- Interactive Map & Pins ---
+    let lastClickPercentX = 50;
+    let lastClickPercentY = 50;
+
+    function handleMapClick(e) {
+      if (e.target.closest('.pin')) return; 
+
+      // Calculate relative percentages for dynamic pin placement
+      const rect = e.currentTarget.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      lastClickPercentX = (x / rect.width) * 100;
+      lastClickPercentY = (y / rect.height) * 100;
+
+      document.getElementById('quick-report-loc').innerText = "Map Location: ul. Targowa (Approx.)";
+      
+      // Reset form photo box for clean state
+      const uploadBox = document.getElementById('photo-upload-quick');
+      if(uploadBox) {
+        uploadBox.style.borderColor = '#d1d5db';
+        uploadBox.style.background = 'transparent';
+        document.getElementById('photo-label-quick').innerText = 'Take or Upload Photo';
       }
-      const label = document.getElementById('photo-label');
-      if (label) label.innerText = '✓ Photo attached: pothole_evidence.jpg';
+      document.getElementById('quick-desc').value = '';
+
+      document.getElementById('modal-quick-report').classList.add('active');
+    }
+
+    function openPinDetail(event, category, loc, desc, emoji) {
+      event.stopPropagation();
+      document.getElementById('pin-detail-cat').innerText = category;
+      document.getElementById('pin-detail-loc').innerText = loc;
+      document.getElementById('pin-detail-desc').innerText = desc;
+      document.getElementById('pin-detail-emoji').innerText = emoji;
+      
+      const titleEl = document.getElementById('pin-detail-title');
+      if(category.includes('Roads')) titleEl.innerText = "Pothole or Road Damage";
+      else if(category.includes('Lights')) titleEl.innerText = "Lighting Failure";
+      else if(category.includes('Waste')) titleEl.innerText = "Abandoned Waste";
+      else titleEl.innerText = "Safety Report";
+
+      // Reset the state of the upvote button for every *new* pin you open
+      const upvoteBtn = document.querySelector('#modal-pin-detail .upvote-btn');
+      if(upvoteBtn) {
+        upvoteBtn.disabled = false;
+        upvoteBtn.innerHTML = `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.5 12.75l6 6 9-13.5" /></svg> I saw this too / Confirm`;
+      }
+
+      document.getElementById('modal-pin-detail').classList.add('active');
+    }
+
+    function addPinToMap(x, y, category, loc, desc, emoji) {
+      const mapArea = document.querySelector('#interactive-map');
+      if(!mapArea) return;
+      const pinHTML = `
+        <div class="pin" style="left:${x}%; top:${y}%;" onclick="openPinDetail(event, '${category}', '${loc}', '${desc}', '${emoji}')">
+          <svg viewBox="0 0 26 32" fill="none"><path d="M13 0C5.82 0 0 5.82 0 13c0 9.75 13 19 13 19s13-9.25 13-19C26 5.82 20.18 0 13 0z" fill="#dc2626"/><circle cx="13" cy="12" r="4.5" fill="#fff"/></svg>
+        </div>
+      `;
+      mapArea.insertAdjacentHTML('beforeend', pinHTML);
+    }
+
+    // --- Form Controls (Category & Loc) ---
+    function pickCategory(btn) {
+      const grid = btn.parentElement;
+      grid.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+    }
+
+    function setLocGPS() {
+      const input = document.getElementById('report-location');
+      input.value = "GPS Location: 51.759, 19.456";
+      showToast('📍 GPS location acquired');
+    }
+
+    let photoAttached = false;
+    function simulateUpload(elem, labelId) {
+      photoAttached = true;
+      elem.style.borderColor = '#16a34a';
+      elem.style.background = '#f0fdf4';
+      const label = document.getElementById(labelId || 'photo-label');
+      if (label) label.innerText = '✓ Photo attached (optional)';
       showToast('📸 Photo attached successfully');
     }
 
-    function attachPhotoAndCloseAlarm() {
-      closeAlarmModal();
-      simulateUpload(document.getElementById('photo-upload-box'));
-      showToast('✓ Photo attached! You can now click Submit Report.');
-    }
-
-    function closeAlarmModal() {
-      const modal = document.getElementById('modal-alarm');
-      if (modal) modal.classList.remove('active');
-    }
-
-    function closeSuccessAndGoToTickets() {
-      const modal = document.getElementById('modal-success');
-      if (modal) modal.classList.remove('active');
-      switchView('tickets');
-    }
-
-    function submitReport(e) {
-      if (e) e.preventDefault();
-
-      // Check validation: Photo is required!
-      if (!photoAttached) {
-        const uploadBox = document.getElementById('photo-upload-box');
-        if (uploadBox) {
-          uploadBox.classList.add('error');
-        }
-        const alarmModal = document.getElementById('modal-alarm');
-        if (alarmModal) {
-          alarmModal.classList.add('active');
-        }
-        showToast('⚠️ Photo required! Please attach evidence.');
-        return;
-      }
-
-      // If photo is attached, extract form values
-      const catSelect = document.getElementById('report-category');
-      const category = catSelect ? catSelect.value.split('(')[0].trim() : 'Road & Pavement';
-      const locInput = document.getElementById('report-location');
-      const location = locInput ? locInput.value : 'ul. Rembielińskiego, 42';
-      const priorityBtn = document.querySelector('.priority-btn.selected');
-      const priority = priorityBtn ? priorityBtn.innerText : 'Medium';
-      const descInput = document.getElementById('report-description');
-      const description = descInput && descInput.value.trim() ? descInput.value.trim() : 'Road hazard reported by citizen';
-
-      // Generate Ticket ID
-      const ticketNum = Math.floor(1050 + Math.random() * 50);
-      const ticketId = '#UF-' + ticketNum;
-
-      // Populate Success Modal Receipt
-      const receiptId = document.getElementById('receipt-id');
-      if (receiptId) receiptId.innerText = ticketId;
-      const receiptCat = document.getElementById('receipt-category');
-      if (receiptCat) receiptCat.innerText = category;
-      const receiptLoc = document.getElementById('receipt-location');
-      if (receiptLoc) receiptLoc.innerText = location;
-
-      // Create new ticket element and prepend to ticket-list
-      const ticketList = document.querySelector('.ticket-list');
-      if (ticketList) {
-        const subheader = ticketList.querySelector('.tickets-subheader');
-        const newTicket = document.createElement('div');
-        newTicket.className = 'ticket';
-        newTicket.style.borderLeft = '3px solid #16a34a';
-        newTicket.style.background = '#f0fdf4';
-        newTicket.onclick = () => showToast(`Viewing your new report ${ticketId} (${priority})`);
-        newTicket.innerHTML = `
-          <div class="ticket-thumb" style="background:#16a34a">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>
-          </div>
+    // --- Submission Logic & Layout Fix ---
+    function createTicketHTML(catText, emoji, loc, timeText) {
+      return `
+        <div class="ticket">
+          <div class="ticket-thumb">${emoji}</div>
           <div class="ticket-body">
             <div class="ticket-meta">
-              <span class="ticket-id">${ticketId}</span>
-              <span class="badge badge-submitted" style="background:#dcfce7;color:#15803d">Just Submitted</span>
+              <span class="ticket-title">${catText}</span>
+              <span class="ticket-time">${timeText}</span>
             </div>
-            <div class="ticket-title">${category} (${priority})</div>
-            <div class="ticket-loc">${location}</div>
-            <span class="ticket-status-note">Received · Awaiting municipal review</span>
+            <div class="ticket-loc">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="10" height="10"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+              ${loc}
+            </div>
+            <button type="button" class="upvote-btn" onclick="upvoteTicket(this, event)">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="12" height="12"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.5 12.75l6 6 9-13.5" /></svg> I saw this too
+            </button>
           </div>
-        `;
-
-        if (subheader && subheader.nextSibling) {
-          ticketList.insertBefore(newTicket, subheader.nextSibling);
-        } else {
-          ticketList.prepend(newTicket);
-        }
-
-        const countEl = document.getElementById('ticket-count');
-        if (countEl) countEl.innerText = document.querySelectorAll('.ticket').length;
-      }
-
-      // Show Thank You Success Modal
-      const successModal = document.getElementById('modal-success');
-      if (successModal) {
-        successModal.classList.add('active');
-      }
+        </div>
+      `;
     }
 
-    function filterTickets(query) {
-      const q = query.toLowerCase().trim();
-      const tickets = document.querySelectorAll('.ticket');
-      let visible = 0;
-      tickets.forEach(t => {
-        const text = t.innerText.toLowerCase();
-        if (text.includes(q)) {
-          t.style.display = 'flex';
-          visible++;
-        } else {
-          t.style.display = 'none';
-        }
-      });
-      const countEl = document.getElementById('ticket-count');
-      if (countEl) countEl.innerText = visible;
+    function submitFullReport() {
+      const catBtn = document.querySelector('#main-cat-grid .cat-btn.selected');
+      
+      // Estrazione del testo pulita e separata per evitare errori di layout
+      const emojiSpan = catBtn ? catBtn.querySelector('.emoji') : null;
+      const emoji = emojiSpan ? emojiSpan.innerText.trim() : '🚧';
+      const catText = catBtn ? catBtn.lastChild.textContent.trim() : 'Roads';
+      const catFull = emoji + ' ' + catText;
+      
+      const locInput = document.getElementById('report-location').value;
+      const loc = locInput ? locInput : 'ul. Rembielińskiego (Default)';
+      const desc = document.getElementById('report-description').value || 'Reported by citizen.';
+
+      // Generate random map position for full report since we didn't click the map
+      const randX = 30 + Math.random() * 40;
+      const randY = 30 + Math.random() * 40;
+
+      addPinToMap(randX, randY, catFull, loc, desc, emoji);
+      addTicketToTracker(catText, emoji, loc);
+      
+      document.getElementById('modal-success').classList.add('active');
+
+      // Reset main photo upload
+      const uploadBox = document.getElementById('photo-upload-main');
+      if(uploadBox) {
+        uploadBox.style.borderColor = '#d1d5db';
+        uploadBox.style.background = 'transparent';
+        document.getElementById('photo-label-main').innerText = 'Take or Upload Photo';
+      }
+      document.getElementById('report-description').value = '';
+    }
+
+    function submitQuickReport() {
+      const catBtn = document.querySelector('#modal-quick-report .cat-btn.selected');
+      
+      // Estrazione del testo pulita e separata per evitare errori di layout
+      const emojiSpan = catBtn ? catBtn.querySelector('.emoji') : null;
+      const emoji = emojiSpan ? emojiSpan.innerText.trim() : '🚧';
+      const catText = catBtn ? catBtn.lastChild.textContent.trim() : 'Roads';
+      const catFull = emoji + ' ' + catText;
+      
+      const loc = document.getElementById('quick-report-loc').innerText;
+      const desc = document.getElementById('quick-desc').value || 'Quick report from map.';
+      
+      // Inject pin exactly where user clicked
+      addPinToMap(lastClickPercentX, lastClickPercentY, catFull, loc, desc, emoji);
+      addTicketToTracker(catText, emoji, loc);
+      
+      closeModal('modal-quick-report');
+      document.getElementById('modal-success').classList.add('active');
+      
+      // Clean up text area for next time
+      document.getElementById('quick-desc').value = '';
+    }
+
+    function addTicketToTracker(catText, emoji, loc) {
+      const container = document.getElementById('ticket-container');
+      const html = createTicketHTML(catText, emoji, loc, "Just Reported");
+      container.insertAdjacentHTML('afterbegin', html);
+    }
+
+    // --- Upvote (L'ho visto anche io) ---
+    function upvoteTicket(btn, event) {
+      event.stopPropagation(); // Evita l'apertura eventuale di modali/click genitore
+      
+      // Cambia la data nella card
+      const ticketBody = btn.closest('.ticket-body') || btn.closest('.modal-card');
+      if(ticketBody) {
+         const timeSpan = ticketBody.querySelector('.ticket-time');
+         if(timeSpan) timeSpan.innerText = "Just updated (Confirmed)";
+      }
+
+      // Disabilita bottone e aggiorna stato
+      btn.disabled = true;
+      btn.innerHTML = `<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="12" height="12"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4.5 12.75l6 6 9-13.5" /></svg> Confirmed`;
+      
+      showToast("✅ Thank you! You confirmed this issue, preventing duplicates.");
     }
   </script>
 </body>
